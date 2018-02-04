@@ -1,0 +1,43 @@
+@import '../../assets/styles/colors.scss';
+
+.report-component {
+  .effort-table {
+    margin-top: 20px;
+    margin-bottom: 55px;
+    border: 1px solid $color-grey--dark;
+    opacity: 0.9;
+  }
+
+  .table-header {
+    height: 35px;
+    background-color: $color-grey--light;
+    text-transform: uppercase;
+  }
+
+  .table-row {
+    border: 1px dashed $color-grey--light;
+    border-left: none;
+    border-right: none;
+    height: 35px;
+  }
+
+  .odd-row {
+    background-color: $color-grey--row;
+  }
+
+  .even-row {
+    background-color: $color-green--row;
+  }
+
+  .no-result-label {
+    font-size: 50px;
+    margin-top: 30vh;
+    display: block;
+    color: $color-greyish--black;
+    
+    i {
+      font-size: 50px;
+      margin-top: -10px;
+    }
+  }
+}

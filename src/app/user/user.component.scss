@@ -1,0 +1,11 @@
+.user-component {
+  #userDropdown {
+    width: 100%;
+  }
+
+  div[aria-labelledby="userDropdown"] {
+    width: 94%;
+    max-height: 350px;
+    overflow: auto;
+  }
+}

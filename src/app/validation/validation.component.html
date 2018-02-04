@@ -1,0 +1,35 @@
+<div class= "efforts-validation">
+  <div class= "row">
+    <div class= "col-lg-12 col-md-12 col-sm-12 col-xs-12 action-row">
+      <div ngbDropdown>
+        <button class="btn btn-outline-primary" id="yearDropdown" ngbDropdownToggle>
+          <i class= "material-icons">date_range</i>
+          Validation Year: {{yearData.selectedYear}}
+        </button>
+        <div ngbDropdownMenu aria-labelledby="yearDropdown">
+          <button class="dropdown-item" *ngFor= "let year of yearData.yearList" (click)= "yearData.selectedYear = year;getEffortsData()">{{year}}</button>
+        </div>
+      </div>
+    </div>
+    <div class= "efforts-table col-lg-8 col-md-8 col-sm-8 col-xs-8 offset-lg-2 offset-md-2 offset-sm-2 offset-xs-2">
+      <div class= "row header-row bold">
+        <div class= "col-lg-2 col-md-2 col-sm-2 col-xs-2">
+          <i class= "material-icons">arrow_downward</i>User/Week<i class= "material-icons">arrow_forward</i>
+        </div>
+        <div class= "col-lg-10 col-md-10 col-sm-10 col-xs-10">
+          <div class= "week-number-container" #headRef>
+            <span class= "week-number" *ngFor= "let week of weeksOfYear">{{week.weekNumber}}</span>
+          </div>
+        </div>
+      </div>
+      <div class= "row content-row" *ngFor= "let user of userList;">
+        <div class= "col-lg-2 col-md-2 col-sm-2 col-xs-2">
+          {{user.username}}
+        </div>
+        <div class= "col-lg-10 col-md-10 col-sm-10 col-xs-10 week-data-container" #bodyRef>
+          <span class= "week-number" *ngFor= "let weekData of user.weekData; let index = index" ngbTooltip= "{{'Week ' + (index+1) + ': ' + (weekData === '-' ? 'NA' : (weekData + 'hrs'))}}" container="body">{{weekData}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

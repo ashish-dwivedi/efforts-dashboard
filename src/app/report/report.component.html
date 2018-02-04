@@ -1,0 +1,76 @@
+<div class= "report-component row">
+  <div class= "col-lg-12 col-md-12 col-sm-12 col-xs-12 action-row">
+    <div ngbDropdown class= "inline-block">
+      <button class="btn btn-outline-primary" id="yearDropdown" ngbDropdownToggle>
+        <i class= "material-icons">date_range</i>
+        Effort Year: {{yearData.selectedYear}}
+      </button>
+      <div ngbDropdownMenu aria-labelledby="yearDropdown">
+        <button class="dropdown-item" *ngFor= "let year of yearData.yearList" (click)= "yearData.selectedYear = year;getEffortsData(yearData.selectedYear)">{{year}}</button>
+      </div>
+    </div>
+    <button class= "btn btn-primary"
+      (click)= "downloadAsExcel()"
+      [disabled]= "!allEfforts.length">
+      <i class= "material-icons">file_download</i>
+      Download As Excel
+    </button>
+  </div>
+  <div class= "col-lg-8 col-md-8 col-sm-8 col-xs-8 offset-lg-2 offset-md-2 offset-sm-2 offset-xs-2 effort-table"
+    *ngIf= "allEfforts.length">
+    <div class= "row text-uppercase table-header bold">
+      <div class= "col-lg-2 col-md-2 col-sm-2 col-xs-2">
+        Week
+      </div>
+      <div class= "col-lg-3 col-md-3 col-sm-3 col-xs-3">
+        Application(s)
+      </div>
+      <div class= "col-lg-3 col-md-3 col-sm-3 col-xs-3">
+        Task
+      </div>
+      <div class= "col-lg-2 col-md-2 col-sm-2 col-xs-2">
+        Incidents
+      </div>
+      <div class= "col-lg-2 col-md-2 col-sm-2 col-xs-2">
+        Effort(hours)
+      </div>
+    </div>
+    <div class= "row table-row cursor-pointer"
+      ngbTooltip= "{{!hideRowTooltip ? 'Double click to modify effort' : ''}}"
+      (dblclick)= "editEffort(effort)"
+      *ngFor= "let effort of allEfforts; let even= even; let odd= odd;"
+      [ngClass]= "{'even-row' : even, 'odd-row' : odd}">
+      <div class= "col-lg-2 col-md-2 col-sm-2 col-xs-2">
+        {{effort.date}}
+      </div>
+      <div class= "col-lg-3 col-md-3 col-sm-3 col-xs-3 text-ellipsis"
+        ngbTooltip= "{{effort.apps}}"
+        container="body"
+        (mouseenter)= "hideRowTooltip = true"
+        (mouseout)= "hideRowTooltip = false">
+        {{effort.apps}}
+      </div>
+      <div class= "col-lg-3 col-md-3 col-sm-3 col-xs-3">
+        {{effort.task}}
+      </div>
+      <div class= "col-lg-2 col-md-2 col-sm-2 col-xs-2">
+          {{effort.numofincidents || '-'}}
+        </div>
+      <div class= "col-lg-2 col-md-2 col-sm-2 col-xs-2">
+        {{effort.effort}}
+      </div>
+    </div>
+  </div>
+  <div class= "col-lg-8 col-md-8 col-sm-8 col-xs-8 offset-lg-2 offset-md-2 offset-sm-2 offset-xs-2 text-center"
+    *ngIf= "!allEfforts.length">
+    <span class= "bold no-result-label">
+      NO EFFORT LOGGED!
+      <i class="material-icons">mood_bad</i>
+    </span>
+    <i class= "material-icons flip-180 blue-text">forward</i>
+    <a [routerLink]= "['/home']"
+      class= "bold">
+      HOME
+    </a>
+  </div>
+</div>

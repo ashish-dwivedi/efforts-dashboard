@@ -1,0 +1,18 @@
+<div class= "user-component" id= "user-component">
+  <div class= "modal-header">
+    <h3 class= "text-uppercase text-center">Select User Profile</h3>
+     <i class="material-icons float-right" *ngIf= "selectedUser" (click)= "_NgbActiveModal.dismiss('close')">close</i> 
+  </div>
+  <div class= "modal-body">
+    <div ngbDropdown>
+      <button class="btn btn-outline-primary" id="userDropdown" ngbDropdownToggle>{{(selectedUser && selectedUser.userid !== '') ? selectedUser.username : '* Select User'}}</button>
+      <div ngbDropdownMenu aria-labelledby="userDropdown">
+        <button class="dropdown-item" *ngFor= "let user of userList" (click)= "selectedUser = user;">{{user.username}}</button>
+      </div>
+    </div>
+  </div>
+  <div class= "modal-footer">
+    <button class= "btn btn-danger" *ngIf= "selectedUser" (click)= "_NgbActiveModal.dismiss('cancel')">Cancel</button>
+    <button class= "btn btn-success" (click)= "setUser()">Set User</button>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+@import '../../assets/styles/colors.scss';
+
+.user-component {
+  .add-user-table {
+    opacity: 0.9;
+    margin-top: 20px;
+    padding: 0 15px;
+    background-color: $color-white;
+    border: 1px solid $color-grey--light;
+    box-shadow: 5px 5px 5px $color-grey--dark;
+
+    label {
+      text-transform: uppercase;
+    }
+
+    input {
+      height: 38px;
+      width: 190px;
+      border-radius: 0.25rem;
+      padding: .375rem .75rem;
+      color: $color-button--blue;
+      border: 1px solid $color-button--blue;
+    }
+
+    button.dropdown-toggle {
+      width: 190px;
+      outline: none;
+      box-shadow: none;
+    }
+
+    .dropdown-menu {
+      height: 75px;
+      overflow: auto;
+    }
+
+    .header {
+      text-align: center;
+      height: 50px;
+    }
+
+    .content {
+      max-height: 0px;
+      overflow: hidden;
+      transition: 0.3s ease-in all;
+      visibility: hidden;
+      &.expanded {
+        max-height: 350px;
+        margin: 20px 0;
+        visibility: visible;
+        overflow: auto;
+      }
+    }
+  }
+}

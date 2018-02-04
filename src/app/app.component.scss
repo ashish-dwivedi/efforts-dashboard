@@ -1,0 +1,81 @@
+@import '../assets/styles/colors.scss';
+
+.home-component {
+  .page-header {
+    opacity: 1;
+    z-index: 1;
+    width: 98%;
+    padding: 5px;
+    position: fixed;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    color: $color-white;
+    text-transform: uppercase;
+    background-color: $color-white;
+    text-shadow: 3px 1px 1px $color-greyish--black;
+  }
+
+  .panel-heading.main {
+    top: 55px;
+    width: 98%;
+    opacity: 1;
+    z-index: 1;
+    position: fixed;
+    background-color: $color-white;
+  }
+
+  .panel-body.main {
+    margin-top: 100px;
+  }
+
+  .panel-footer {
+    bottom: 0;
+    width: 100vw;
+    height: 35px;
+    position: fixed;
+    text-align: center;
+    margin-left: -15px;
+    color: $color-white;
+    background-color: $color-blue;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  .navbar-nav {
+    height: 35px;
+    margin-top: 10px;
+    flex-direction: row;
+
+    &.navbar-links {
+      width: 70%;
+      float: left;
+    }
+
+    li {
+      margin-right: 10px;
+    }
+  }
+
+  .navbar-btn-container {
+    width: 30%;
+    float: right;
+    margin-top: 10px;
+
+    .name {
+      float: right;
+      pointer-events: none;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .caret {
+      float: right;
+      border-radius: 0;
+      height: 38px;
+      box-shadow: none;
+    }
+  }
+}

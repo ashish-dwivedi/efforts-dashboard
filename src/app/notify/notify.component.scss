@@ -1,0 +1,11 @@
+@import '../../assets/styles/colors.scss';
+
+.notify-component {
+  .success {
+    color: $color-green;
+  }
+
+  .failure {
+    color: $color-red;
+  }
+}

@@ -1,0 +1,113 @@
+@import './assets/styles/colors.scss';
+
+body {
+  background-image: url('./assets/img/adidas_bck.png');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@font-face {
+  font-family: adiHaus;
+  src : url('./assets/fonts/adihaus-bold.otf');
+}
+
+@media screen and (min-width: 576px)  {
+  .modal-dialog {
+    max-width: 700px;
+  }
+}
+
+.bold {
+  font-family: adiHaus;
+}
+
+.no-margin {
+  margin: 0px;
+}
+
+.no-padding {
+  padding: 0px;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.material-icons {
+  display: inline-block;
+  cursor: pointer;
+  vertical-align: middle;
+  &.disabled {
+    color: $color-grey--light;
+  }
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.green-text {
+  color: $color-green;
+}
+
+.error {
+  color: $color-red;
+}
+
+.blue-text {
+  color: $color-blue;
+}
+
+.flip-180 {
+  transform: rotate(180deg); 
+}
+
+.modal-row {
+  margin-bottom: 15px
+}
+
+.flash {
+  animation: flash 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-iteration-count: infinite;
+}
+
+.text-ellipsis {
+  max-width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.margin-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.delete-icon {
+  color: $color-red;
+}
+
+.btn-info {
+  background-color: $color-blue;
+  &:hover {
+    background-color: $color-blue;
+  }
+}
+
+.action-row {
+  height: 48px;
+  padding: 5px 15px;
+}
+
+@keyframes flash {
+  0% {opacity: 1}
+  50% {opacity: 0}
+  100% {opacity: 1}
+}

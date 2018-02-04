@@ -1,0 +1,40 @@
+@import '../../assets/styles/colors.scss';
+
+.home-component {
+  .btn {
+    height: 40vh;
+    opacity: 0.95;
+    margin-top: 15vh;
+    border-radius: 10%;
+    color: $color-white;
+    box-shadow: 8px -5px 5px $color-grey--dark;
+    &:hover {
+      opacity: 1;
+      color: $color-greyish--black;
+      box-shadow: 3px 3px 5px $color-grey--dark;
+      .material-icons {
+        color: $color-greyish--black;
+      }
+    }
+    label {
+      font-weight: bold;
+      font-size: 24px;
+      white-space: pre-wrap;
+    }
+  }
+
+  .btn-success {
+    background-color: #22bf46;
+  }
+
+  .material-icons {
+    font-size: 24px;
+    vertical-align: text-bottom;
+    color: $color-white;
+  }
+
+  .main-btn-icon {
+    display: block;
+    font-size: 100px;
+  }
+}

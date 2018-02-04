@@ -1,0 +1,25 @@
+<div class= "row analyze-component">
+  <div class= "col-lg-12 col-md-12 col-sm-12 col-xs-12 action-row">
+    <div ngbDropdown>
+      <button class="btn btn-outline-primary" id="chartTypeDropdown" ngbDropdownToggle>
+        Chart Type: {{currentChartType | uppercase}}
+      </button>
+      <div ngbDropdownMenu aria-labelledby="chartTypeDropdown">
+        <button class="dropdown-item" *ngFor= "let type of availableTypes" (click)= "currentChartType = type.type">
+          <i class= "material-icons">{{type.icon}}</i>
+          {{type.type | uppercase}}
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class= "col-lg-8 col-md-8 col-sm-8 col-xs-8 offset-lg-2 offset-md-2 offset-sm-2 offset-sm-2 chart-section">
+      <div *ngIf= "displayCharts">
+        <canvas baseChart
+          [data]="currentChartData"
+          [datasets]="currentChartData"
+          [labels]="currentChartLabels"
+          [chartType]="currentChartType">
+        </canvas> 
+        </div>
+  </div>
+</div>

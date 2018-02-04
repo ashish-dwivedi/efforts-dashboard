@@ -1,0 +1,18 @@
+<div class= "container-fluid notify-component">
+    <div class= "row">
+      <div class="modal-header col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h3 class="modal-title bold text-uppercase inline-block" [ngClass]= "modalData.status">
+          {{modalData.status === 'success' ? 'SUCCESS' : 'FAILED'}}
+        </h3>
+        <i class="material-icons float-right"
+          (click)="_NgbActiveModal.dismiss()">
+          clear
+        </i>
+      </div>
+    </div>
+    <div class= "row">
+      <div class="modal-body col-lg-12 col-md-12 col-sm-12 col-xs-12" [ngClass]= "modalData.status">
+        <h4>{{modalData.message}}</h4>
+      </div>
+    </div>
+  </div>

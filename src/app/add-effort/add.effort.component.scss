@@ -1,0 +1,62 @@
+@import '../../assets/styles/colors.scss';
+
+.add-effort-component {
+  .modal-header-row {
+    border: 1px solid #d2d2d2;
+  }
+
+  [ngbdropdown] {
+    width: 100%;
+    overflow: hidden;
+    button[ngbdropdowntoggle] {
+      width: 100%;
+      overflow: hidden;
+      display: inline-block;
+      text-overflow: ellipsis;
+    }
+  }
+  
+  .unpersisted-data {
+    background-color: #1e1e1e;
+    color: #fff;
+    margin-bottom: 5px;
+  }
+
+  .dropdown-menu  {
+    max-height: 300px;
+    overflow: auto;
+  }
+
+  .week-container {
+    width: 75%;
+    display: inline-block;
+    height: 38px;
+    vertical-align: middle;
+    padding: 7px 5px;
+  }
+
+  .week-nav {
+    font-size: 20px;
+  }
+
+  .efforts-input {
+    padding-left: 10px;
+    border: none;
+    height: 38px;
+    border-radius: 4px;
+    text-align: center;
+    color: $color-greyish--black;
+    background-color: $color-button--grey;
+    &::placeholder {
+      color: $color-greyish--black;
+    }
+    &[disabled] {
+      cursor: not-allowed;
+      background-color: $color-grey--light;
+    }
+  }
+
+  ::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+}

@@ -1,0 +1,41 @@
+@import '../../assets/styles/colors.scss';
+
+.efforts-validation {
+  .efforts-table {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid $color-grey--light;
+  }
+
+  .header-row {
+    line-height: 35px;
+    border-bottom: 1px solid $color-grey--light;
+    i {
+      font-size: 15px;
+    }
+  }
+
+  .content-row {
+    line-height: 35px;
+    border-bottom: 1px dashed $color-grey--dark;
+  }
+
+  .week-number-container {
+    width: 100%;
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+  .week-number {
+    width: 30px;
+    margin: 0 5px;
+    display: inline-block;
+  }
+
+  .week-data-container {
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}

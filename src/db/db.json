@@ -1,0 +1,130 @@
+{
+  "effortsrawdata": {
+    "allTasks": [
+      "Automation",
+      "BA /Requirements",
+      "Coordination",
+      "Deployment",
+      "Development",
+      "Documentation",
+      "Fill / create report",
+      "Holiday",
+      "Incidents",
+      "Installation",
+      "Knowledge transfer",
+      "Leave",
+      "Meeting",
+      "Monitoring",
+      "Project management",
+      "Request for information",
+      "Service Request",
+      "Task description",
+      "Testing",
+      "Vacation"
+    ],
+    "allApps": [
+      "All",
+      "3D",
+      "AssistEdge",
+      "AssistStage",
+      "CATALIGENT",
+      "CC",
+      "DESI",
+      "DesignPortal",
+      "DP",
+      "DU",
+      "DWB",
+      "E2E",
+      "Enfocus",
+      "Joota",
+      "Mstr",
+      "Others",
+      "PDM",
+      "PDM Design Support",
+      "Sell-In-Toll",
+      "SIT",
+      "VP Support",
+      "WFMS"
+    ]
+  },
+  "efforts": [
+    {
+      "task": "BA /Requirements",
+      "apps": [
+        "3D"
+      ],
+      "date": "Dec 18-22, 2017",
+      "updatedOn": "2017-12-23T14:42:49.569Z",
+      "user": "Amit Gupta",
+      "weekNumber": 51,
+      "effort": 10,
+      "id": 0.5943579611711121
+    },
+    {
+      "task": "Development",
+      "apps": [
+        "CATALIGENT"
+      ],
+      "date": "Dec 18-22, 2017",
+      "updatedOn": "2017-12-23T14:43:18.299Z",
+      "user": "Amit Gupta",
+      "weekNumber": 51,
+      "effort": 10,
+      "id": 0.5660748443314878
+    },
+    {
+      "task": "Coordination",
+      "apps": [
+        "AssistEdge"
+      ],
+      "date": "Dec 18-22, 2017",
+      "updatedOn": "2017-12-23T14:43:01.012Z",
+      "user": "Amit Gupta",
+      "weekNumber": 51,
+      "effort": 20,
+      "id": 0.13704372010138566
+    },
+    {
+      "task": "BA /Requirements",
+      "apps": [
+        "All"
+      ],
+      "date": "Dec 11-15, 2017",
+      "updatedOn": "2017-12-23T17:25:56.001Z",
+      "user": "Amit Gupta",
+      "weekNumber": 50,
+      "effort": 40,
+      "id": 0.2515618813837137
+    },
+    {
+      "task": "Coordination",
+      "apps": [
+        "DesignPortal"
+      ],
+      "date": "Jan 1-5, 2017",
+      "updatedOn": "2017-12-23T17:35:46.345Z",
+      "user": "Amit Gupta",
+      "weekNumber": 1,
+      "effort": 30,
+      "id": 0.7667451044896123
+    }
+  ],
+  "users": [
+    "Aman Bhatia",
+    "Amani",
+    "Ambar",
+    "Amit Gupta",
+    "Mohan Divi",
+    "Naresh Gudla",
+    "Nava Krishna",
+    "Pradeep Jha",
+    "Radhakrishna",
+    "Rajni",
+    "Renuka Priya",
+    "Sneha Reddy",
+    "Sumana Saha",
+    "Sumit",
+    "Swathi Juluru",
+    "Vishalakshi"
+  ]
+}

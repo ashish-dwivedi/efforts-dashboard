@@ -1,0 +1,61 @@
+<div class="container-fluid home-component">
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<div class="page-header header bold">
+				<img class="logo float-left" src="./assets/img/infosys.png">
+				<span>Virtualization</span>
+				<img class="logo float-right" src="./assets/img/adidas.png">
+			</div>
+		</div>
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-heading main">
+			<ul class="nav navbar-nav bold text-uppercase navbar-links">
+				<li>
+					<a [routerLink]="['/home']">
+						<i class="material-icons">home</i>
+						Home
+					</a>
+				</li>
+				<li>
+					<a [routerLink]="['/report']">
+						<i class="material-icons">assignment</i>
+						Report
+					</a>
+				</li>
+				<li>
+					<a [routerLink]="['/validation']">
+						<i class="material-icons">bubble_chart</i>
+						Validation
+					</a>
+				</li>
+				<li>
+					<a [routerLink]="['/analyze']">
+						<i class="material-icons">multiline_chart</i>
+						Trend
+					</a>
+				</li>
+				<li>
+					<a [routerLink]="['/user']">
+						<i class="material-icons">person</i>
+						User
+					</a>
+				</li>
+			</ul>
+			<div class= "navbar-btn-container">
+				<button class= "name btn btn-info">
+					{{_UserDataService.getUserData()['selected'].username}}
+				</button>
+				<button class= "caret btn btn-info" ngbTooltip= "Switch user" (click)= "openUserSetModal()">
+					<i class="material-icons">arrow_drop_down</i>
+				</button>
+			</div>
+		</div>
+		<div class="panel-body main">
+			<router-outlet></router-outlet>
+		</div>
+		<div class= "panel-footer bold">
+			<span>Infosys Limited &reg;</span>
+		</div>
+	</div>
+</div>
